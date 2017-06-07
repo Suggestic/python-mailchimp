@@ -54,10 +54,7 @@ class AutomationEmailQueues(BaseApi):
             url=self._build_path(workflow_id, 'emails', email_id, 'queue'),
             data=data
         )
-        if response is not None:
-            self.subscriber_hash = response['id']
-        else:
-            self.subscriber_hash = None
+
         return response
 
 
